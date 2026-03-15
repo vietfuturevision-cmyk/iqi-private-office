@@ -1,10 +1,5 @@
-import dynamic from "next/dynamic";
-
-// Dynamic import để tránh lỗi SSR với framer-motion và các browser API
-const IQIPrivateOfficeNew = dynamic(
-  () => import("./IQIPrivateOffice"),
-  { ssr: false }
-);
+"use client";
+import IQIPrivateOfficeNew from "./IQIPrivateOffice";
 
 export default function Page() {
   return <IQIPrivateOfficeNew />;
